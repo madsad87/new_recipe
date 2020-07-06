@@ -16,6 +16,9 @@ require_once get_template_directory() . '/lib/init.php';
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
+// Sets up Mobile Detect Library
+require_once "lib/Mobile_Detect.php";
+
 add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
 /**
  * Sets localization (do not remove).
@@ -205,12 +208,94 @@ function genesis_sample_comments_gravatar( $args ) {
 
 /*----- Display Logo before Site Title -----*/
 
-add_action( 'genesis_header', 'ms_site_image', 5 );
+/*add_action( 'genesis_header', 'ms_site_image', 5 );
 
 function ms_site_image() {
 
-	$header_image = '<img src="http://developmadison.wpengine.com/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />';
+	$header_image = '<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />';
 
 	printf( '<div class="site-image">%s</div>', $header_image );
 
+}*/
+
+
+/*-- START Mobile Detect --*/
+
+$detect = new Mobile_Detect;
+ 
+// Any mobile device (phones or tablets).
+if ( $detect->isMobile() ) {
+ 
 }
+ 
+// Any tablet device.
+if( $detect->isTablet() ){
+ 
+}
+ 
+// Exclude tablets.
+if( $detect->isMobile() && !$detect->isTablet() ){
+ 
+}
+ 
+// Check for a specific platform with the help of the magic methods:
+if( $detect->isiOS() ){
+ 
+}
+ 
+if( $detect->isAndroidOS() ){
+ 
+}
+ 
+// Alternative method is() for checking specific properties.
+// WARNING: this method is in BETA, some keyword properties will change in the future.
+$detect->is('Chrome');
+$detect->is('iOS');
+$detect->is('UC Browser');
+// [...]
+ 
+// Batch mode using setUserAgent():
+$userAgents = array(
+'Mozilla/5.0 (Linux; Android 4.0.4; Desire HD Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19',
+'BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103',
+// [...]
+);
+foreach($userAgents as $userAgent){
+ 
+  $detect->setUserAgent($userAgent);
+  $isMobile = $detect->isMobile();
+  $isTablet = $detect->isTablet();
+  // Use the force however you want.
+ 
+}
+ 
+// Get the version() of components.
+// WARNING: this method is in BETA, some keyword properties will change in the future.
+$detect->version('iPad'); // 4.3 (float)
+$detect->version('iPhone'); // 3.1 (float)
+$detect->version('Android'); // 2.1 (float)
+$detect->version('Opera Mini'); // 5.0 (float)
+// [...]
+
+/*-- END Mobile Detect --*/
+
+
+add_action( 'genesis_header', 'ms_site_image', 5 );
+
+/*include 'lib/Mobile_Detect.php';*/
+function ms_site_image() {
+	$detect = new Mobile_Detect();
+
+if ($detect->isMobile()) {
+	$header_image = '<img src="/wp-content/uploads/2020/07/22-3.png" alt="" />';
+	
+	printf( '<div class="site-image">%s</div>', $header_image );
+}
+else if ($header_image = '<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />') {
+	;
+	
+	printf( '<div class="site-image">%s</div>', $header_image );
+}
+}
+
+

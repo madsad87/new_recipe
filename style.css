@@ -1855,7 +1855,7 @@ p.entry-meta {
     height: 50px;
     margin: 0;
     width: 200px;
-    float: left;
+	float: left;
 }
 
 /*—– Adjusting Site Title after Site Logo —–*/
@@ -1866,3 +1866,29 @@ padding: 20px;
 }
 
 
+/*-- Home Search Bar Section style --*/
+
+.home .home-search-section .wp-block-search__label {
+    width: 50%;
+    text-align: right;
+    margin: 20px;
+    font-size: 28px;
+}
+
+.home-search-section .wp-block-search__input {
+    flex-grow: 1;
+    max-width: 360px;
+    height: 50%;
+    margin: 20px;
+}
+
+.home-search-section .wp-block-search__button {
+    margin-left: 10px;
+    height: 50%;
+    margin: 20px;
+}
+
+
+.wp-block-search .home-search-section {
+     display: none;
+}
