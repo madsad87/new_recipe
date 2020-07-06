@@ -1856,6 +1856,7 @@ p.entry-meta {
     margin: 0;
     width: 200px;
 	float: left;
+	padding-top: 13px;
 }
 
 /*—– Adjusting Site Title after Site Logo —–*/
