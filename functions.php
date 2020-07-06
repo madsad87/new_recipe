@@ -199,3 +199,18 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+
+/*--DEFAULT THEME FUNCTIONS END HERE--**/
+
+/*----- Display Logo before Site Title -----*/
+
+add_action( 'genesis_header', 'ms_site_image', 5 );
+
+function ms_site_image() {
+
+	$header_image = '<img src="http://developmadison.wpengine.com/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />';
+
+	printf( '<div class="site-image">%s</div>', $header_image );
+
+}

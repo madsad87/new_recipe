@@ -1844,3 +1844,25 @@ p.entry-meta {
 	}
 
 }
+
+/*--DEFAULT THEME CSS ENDS HERE--*/
+
+
+/*—– Styling Logo before Site Title —–*/
+
+.site-header .site-image img {
+    display: block;
+    height: 50px;
+    margin: 0;
+    width: 200px;
+    float: left;
+}
+
+/*—– Adjusting Site Title after Site Logo —–*/
+
+.header-full-width .title-area {
+width: 50%;
+padding: 20px;
+}
+
+
