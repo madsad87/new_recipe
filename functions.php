@@ -219,8 +219,10 @@ function ms_site_image() {
 }*/
 
 
-/*-- START Mobile Detect --*/
+/* START Mobile Detect */
 
+// Sets up Mobile Detect Library
+require_once "lib/Mobile_Detect.php"; 
 $detect = new Mobile_Detect;
  
 // Any mobile device (phones or tablets).
@@ -277,8 +279,9 @@ $detect->version('Android'); // 2.1 (float)
 $detect->version('Opera Mini'); // 5.0 (float)
 // [...]
 
-/*-- END Mobile Detect --*/
+/* END Mobile Detect */
 
+/*
 
 add_action( 'genesis_header', 'ms_site_image', 5 );
 
@@ -292,10 +295,10 @@ if ($detect->isMobile()) {
 	printf( '<div class="site-image">%s</div>', $header_image );
 }
 else if ($header_image = '<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />') {
-	;
 	
 	printf( '<div class="site-image">%s</div>', $header_image );
 }
 }
+
 
 
