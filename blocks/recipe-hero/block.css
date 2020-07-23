@@ -1,0 +1,25 @@
+p {
+    margin: 0 0 5px !important;
+    padding: 0;
+}
+
+.entry-content ul > li > p {
+    display: inline;
+}
+
+.entry-content ul > li {
+    list-style-type: none;
+    
+}
+
+.entry-content ol, .entry-content ul {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ab-block-container .ab-container-content {
+    margin: 0 auto;
+    position: relative;
+    padding: 2% 5% 2% 5%;
+}

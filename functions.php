@@ -300,5 +300,21 @@ else if ($header_image = '<img src="/wp-content/uploads/2020/06/wp-engine-1.svg"
 }
 }
 
+add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
+/**
+ * Enqueue Font Awesome.
+ */
+function custom_load_font_awesome() {
+
+    wp_enqueue_style( 'font-awesome-free', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
+
+}
 
 
+//Remove Entry Title from Posts
+add_action( 'loop_start', 'remove_titles_all_single_posts' );
+function remove_titles_all_single_posts() {
+    if ( is_singular('post') ) {
+        remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+    }
+}
