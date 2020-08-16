@@ -4,9 +4,9 @@
 <img src="<?php block_field( 'hero-image' ); ?>" />
 <ul>
     <li><i class="fas fa-utensils"></i><p><b>Servings:</b> <?php block_field( 'servings' ); ?></p></li>
-    <li><i class="fas fa-stopwatch"></i><p><b>Prep Time:</b> <?php block_field( 'prep-time' ); ?></p></li>
-    <li><i class="far fa-clock"></i><p><b>Cook Time:</b> <?php block_field( 'cook-time' ); ?></p></li>
-    <li><i class="fas fa-history"></i><p><b>Total Time:</b> <?php block_field( 'total-time' ); ?></p></li>
+    <li><i class="fas fa-stopwatch"></i><p><b>Prep Time:</b> <?php block_field( 'prep-time' ); ?>min</p></li>
+    <li><i class="far fa-clock"></i><p><b>Cook Time:</b> <?php block_field( 'cook-time' ); ?>min</p></li>
+    <li><i class="fas fa-history"></i><p><b>Total Time:</b> <?php block_field( 'total-time' ); ?>min</p></li>
 </ul>
 </div>
 </div>
@@ -14,7 +14,8 @@
 
 
 <div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
-<h1 class="author-card-1"><?php wp_title();?></h1>
+<h1 class="author-card-1"><?php wp_title('');?></h1>
+<p style="color: darkgrey; font-size: 14px;"><?php block_field( 'tag-line' ); ?></p>
         <a class="author-card-1" href="#">Category Here</a>
         <p><b>Course:</b> <?php block_field( 'course' ); ?></p>
         <p><b>Cuisine:</b> <?php block_field( 'cuisine' ); ?></p>

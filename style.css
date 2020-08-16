@@ -1893,3 +1893,28 @@ padding: 20px;
 .wp-block-search .home-search-section {
      display: none;
 }
+
+
+/* Typographical Elements */
+
+@font-face {
+	font-family: AbrilFatface;  
+	src: url(lib/fonts/AbrilFatface-Regular.ttf);  
+	font-weight: 700;  
+}
+
+@font-face {
+	font-family: OpenSans;  
+	src: url(lib/fonts/OpenSans-Regular.ttf);  
+	font-weight: 700;  
+}
+
+h1, h2 {
+	font-family: AbrilFatface;
+	font-weight: 700;
+}
+
+body{
+	font-family: OpenSans;
+	font-weight: 700;
+}
