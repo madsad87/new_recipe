@@ -1438,18 +1438,24 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
-	border-top: 1px solid #eee;
+	background-color: #00283b;
+	border-top: 2px solid #00cdd5;
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 30px;
 	text-align: center;
+	color: #fff;
+
 }
 
 .site-footer p {
 	margin-bottom: 0;
+	text-transform: uppercase;
 }
 
+.site-footer span {
+	text-transform: uppercase;
+}
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
@@ -1917,4 +1923,28 @@ h1, h2 {
 body{
 	font-family: OpenSans;
 	font-weight: 700;
+}
+
+.site-footer a {
+	color: #fff !important;
+}
+
+/* Footer Social Icons */
+
+.ms-social-icon {
+	background: none !important;
+	border: none !important;
+	float: left;
+	list-style-type: none !important;
+	margin: 0 6px 12px !important;
+	padding: 0 !important;
+}
+
+.ms-social-icon svg {
+	width: 35px;
+	height: 35px;
+	fill: #00283b;
+	background-color: #fff;
+	border-radius: 50%;
+	padding: 20%;
 }

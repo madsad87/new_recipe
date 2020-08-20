@@ -208,11 +208,11 @@ function genesis_sample_comments_gravatar( $args ) {
 
 /*----- Display Logo before Site Title -----*/
 
-/*add_action( 'genesis_header', 'ms_site_image', 5 );
+add_action( 'genesis_header', 'ms_site_image', 5 );
 
-function ms_site_image() {
+/*function ms_site_image() {
 
-	$header_image = '<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />';
+	$header_image = '<img src="wp-content/uploads/2020/06/wp-engine-1.svg" alt="" />';
 
 	printf( '<div class="site-image">%s</div>', $header_image );
 
@@ -318,3 +318,77 @@ function remove_titles_all_single_posts() {
         remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
     }
 }
+
+// Remove site footer.
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+
+// Customize site footer
+add_action( 'genesis_footer', 'sp_custom_footer' );
+function sp_custom_footer() { ?>
+
+	<div class="site-footer">
+		<div class="wrap">
+			<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" style="width: 200px; height:50px; display: block; margin: 0; float: left; padding-top: 13px;"> 
+			<h1 class="site-title title-area" itemprop="headline" style="width: auto;">
+				<a href="http://representscook.local/" >| Cooking with Culture</a>
+			</h1>
+			
+			<div style="width: 320px; height:50px; display: block; margin: 0; float: right; padding-top: 13px; margin: 0 4% 0 4%;">
+			
+			<ul id="menu-my-custom-menu" class="menu genesis-nav-menu menu-primary js-superfish sf-js-enabled sf-arrows" style="touch-action: pan-y; display: flex; justify-content: space-around;">
+				<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+					<a href="http://representscook.local/recipes/" itemprop="url">
+						<span itemprop="name">Recipes</span>
+					</a>
+				</li>
+				<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+					<a href="http://representscook.local/stories/" itemprop="url">
+						<span itemprop="name">Stories</span>
+					</a>
+				</li>
+				<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+					<a href="http://representscook.local/submit/" itemprop="url">
+						<span itemprop="name">Submit</span>
+					</a>
+				</li>
+			</ul>
+			<p>© 2020 wpe engine all rights reserved</p>
+			</div>
+			<div style="float: right;">
+			<ul class="alignright" style="padding-top: 30px;">
+	<li class="ssi-facebook ms-social-icon">
+		<a href="#">
+			<svg role="img" class="social-facebook" aria-labelledby="social-facebook-3">
+				<title id="social-facebook-3">Facebook</title>
+				<use xlink:href="http://representscook.local/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-facebook"></use>
+			</svg>
+		</a>
+	</li>
+	<li class="ssi-instagram ms-social-icon">
+		<a href="#">
+			<svg role="img" class="social-instagram" aria-labelledby="social-instagram-3">
+				<title id="social-instagram-3">Instagram</title>
+				<use xlink:href="http://representscook.local/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-instagram"></use>
+			</svg>
+		</a>
+	</li>
+	<li class="ssi-rss ms-social-icon">
+		<a href="#">
+			<svg role="img" class="social-rss" aria-labelledby="social-rss-3">
+				<title id="social-rss-3">RSS</title>
+				<use xlink:href="http://representscook.local/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-rss"></use>
+			</svg>
+		</a>
+	</li>
+</ul>
+			</div>
+		</div>
+	</div>
+
+
+	
+<?php
+}
+
