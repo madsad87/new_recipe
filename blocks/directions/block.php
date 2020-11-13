@@ -1,20 +1,60 @@
-<div class="wp-block-atomic-blocks-ab-container alignfull ab-block-container"><div class="ab-container-inside"><div class="ab-container-content">
-<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-3 ab-3-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column">
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
+<div class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content">
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-widecenter"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column">
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <h2 style="background-color:#00ced7; color:#fff;  padding:5px;">Ingredients </h2>
-<div style="font-weight: 700;" ><?php block_field( 'ingredients' ); ?></div>
+<div style="font-weight: 700;" ><?php
+ // Block Lab Example Repeater Field
+
+if ( block_rows( 'ingredients-list' ) ):
+
+    echo '<ul style="flex-direction: column; flex-wrap: wrap; line-height: 1.2;">';
+  
+
+    while ( block_rows( 'ingredients-list' ) ) :
+        block_row( 'ingredients-list' );
+
+        echo '<li>';
+        block_sub_field( 'ingredients' );
+        echo '</li><br>';
+        
+    endwhile;
+
+    echo '<ul>';
+endif;
+
+reset_block_rows( 'ingredients-list' );?></div>
 </div></div>
 
 
 
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <h2 style="background-color:#00ced7; color:#fff; padding:5px;">Directions</h2>
-<div style="font-weight: 700;" ><?php block_field( 'directions' ); ?></div>
+<div style="font-weight: 700;" ><?php
+ // Block Lab Example Repeater Field
+
+if ( block_rows( 'ingredients-list' ) ):
+
+    echo '<ol style="flex-direction: column; flex-wrap: wrap; line-height: 1.2;">';
+  
+
+    while ( block_rows( 'directions' ) ) :
+        block_row( 'directions' );
+
+        echo '<li>';
+        block_sub_field( 'direction' );
+        echo '</li><br>';
+        
+    endwhile;
+
+    echo '<ol>';
+endif;
+
+reset_block_rows( 'directions' );?></div>
 </div></div>
 
 
 
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <h4 class="has-text-align-left" style="background-color:#eaebec; text-transform: uppercase; padding:5px; margin-top: 5px;">Recent Posts</h4>
 <ul style="display: block; padding-top: 0px; line-height: 2;"> 
 <?php

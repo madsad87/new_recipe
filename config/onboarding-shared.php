@@ -17,7 +17,7 @@ return [
 	'plugins'          => [
 		[
 			'name'       => __( 'Atomic Blocks', 'genesis-sample' ),
-			'slug'       => 'atomic-blocks/atomicblocks.php',
+			'slug'       => 'genesis-blocks/atomicblocks.php',
 			'public_url' => 'https://atomicblocks.com/',
 		],
 		[

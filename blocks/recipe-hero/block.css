@@ -7,10 +7,6 @@ p {
     display: inline;
 }
 
-.entry-content ul > li {
-    list-style-type: none;
-    
-}
 
 .entry-content ol, .entry-content ul {
     padding-top: 10px;
@@ -19,7 +15,7 @@ p {
     padding-left: 0px;
 }
 
-.ab-block-container .ab-container-content {
+.gb-block-container .gb-container-content {
     margin: 0 auto;
     position: relative;
     padding: 2% 5% 2% 5%;

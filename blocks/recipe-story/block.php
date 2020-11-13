@@ -1,12 +1,12 @@
-<div style="background-color:#eaebec" class="wp-block-atomic-blocks-ab-container alignfull ab-block-container"><div class="ab-container-inside"><div class="ab-container-content">
-<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-wideright"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column">
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
+<div style="background-color:#eaebec" class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content">
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-wideright"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column">
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <img style="max-width: 100%; max-height: 100%; display: block;" src="<?php block_field( 'image' ); ?>"/>
 </div></div>
 
 
 
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner">
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <h3><?php block_field( 'title' ); ?></h3>
 
 

@@ -335,7 +335,7 @@ add_action( 'genesis_footer', 'sp_custom_footer' );
 function sp_custom_footer() { ?>
 <div class="site-footer">
 	<div class="wrap">
-		<img src="/wp-content/uploads/2020/09/LGO-WPEngine-Horiz-reg-RGB-01.png" alt="" style="width: 200px; height:50px; display: block; margin: 0; float: left; padding-top: 13px;">
+		<img src="/wp-content/uploads/2020/06/wp-engine-1.svg" alt="" style="width: 200px; height:50px; display: block; margin: 0; float: left; padding-top: 13px;">
 			<h1 class="site-title title-area" itemprop="headline" style="width: auto;">
 				<a href="/" >| Cooking with Culture</a>
 			</h1>
