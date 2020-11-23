@@ -1958,3 +1958,8 @@ body{
 	border-radius: 50%;
 	padding: 20%;
 }
+
+/* Homepage Think Divider line */
+.thick-line {
+	border-bottom: 3px solid currentColor !important;
+}

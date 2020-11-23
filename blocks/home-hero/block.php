@@ -11,15 +11,8 @@ $post_img_alttext = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_atta
 					<div class="gb-block-layout-column-inner">
 						<a href="
 							<?php echo get_permalink( block_value( 'featured-hero' )->ID ); ?>">
-							<img 
-                        src="
-								<?php echo $post_img_attributes[0]; ?>" 
-                        width="
-								<?php echo $post_img_attributes[1]; ?>" 
-                        height="
-								<?php echo $post_img_attributes[2]; ?>" 
-						alt="
-								<?php echo $post_img_alttext;?>"/>
+							<?php echo get_the_post_thumbnail( $page->ID, array( 1200, 800) ); ?>
+							
 							</a>
 						</div>
 					</div>

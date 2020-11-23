@@ -1,3 +1,7 @@
+<?php
+// Variables
+$category_id = get_cat_ID( block_value( 'recipe-author' )->ID );
+?>
 <div class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content">
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-wideleft"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column">
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
@@ -16,7 +20,11 @@
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner">
 <h1 class="author-card-1"><?php wp_title('');?></h1>
 <p style="color: darkgrey; font-size: 14px;"><?php block_field( 'tag-line' ); ?></p>
-        <a class="author-card-1" href="#">Category Here</a>
+        <a class="author-card-1" href="<?php get_permalink( block_value( 'recipe-author' )->ID )?>;">
+			<h5 style="padding-top: 15px; font-size: 20px;">
+				<?php block_field( 'recipe-author' ); ?>
+			</h5>
+		</a>
         <p><b>Course:</b> <?php block_field( 'course' ); ?></p>
         <p><b>Cuisine:</b> <?php block_field( 'cuisine' ); ?></p>
         <p><b>Difficulty:</b> <?php block_field( 'difficulty' ); ?></p></div></div>
